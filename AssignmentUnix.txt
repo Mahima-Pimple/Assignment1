@@ -1,0 +1,409 @@
+20) List the contents of a directory and their attributes
+
+Solution : ls command is used to list the contents of a directory and their attributes
+mahima@mahima-VirtualBox:~$ ls
+Desktop    Downloads      Music     Public   snap       Videos
+Documents  HelloWorld.sh  Pictures  Scripts  Templates
+
+22) Long list the content with file, directory ownership, permissions,sizes, etc…
+
+Solution : ls -l command is used to see the content with file, directory ownership, permissions etc.
+
+mahima@mahima-VirtualBox:~$ ls -l
+total 44
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Desktop
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Documents
+drwxr-xr-x 2 mahima mahima 4096 Aug  5 12:43 Downloads
+-rw-rw-r-- 1 mahima mahima   26 Aug  6 11:54 HelloWorld.sh
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Music
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Pictures
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Public
+drwxrwxr-x 2 mahima mahima 4096 Aug  4 12:12 Scripts
+drwxr-xr-x 3 mahima mahima 4096 Aug  4 21:32 snap
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Templates
+drwxr-xr-x 2 mahima mahima 4096 Aug  4 11:38 Videos
+mahima@mahima-VirtualBox:~$ 
+
+
+24) Display the size of the file in human readable format
+
+Solution : ls -sh command is used to display size of file 
+mahima@mahima-VirtualBox:~$ ls -sh
+total 44K
+4.0K Desktop    4.0K HelloWorld.sh  4.0K Public   4.0K Templates
+4.0K Documents  4.0K Music          4.0K Scripts  4.0K Videos
+4.0K Downloads  4.0K Pictures       4.0K snap
+mahima@mahima-VirtualBox:~$ 
+
+
+26) Show all files and folders including hidden one
+
+Solution : ls -a command is used to see the hidden files + other files and folders
+mahima@mahima-VirtualBox:~$ ls -a
+.              Desktop        Music     .sudo_as_admin_successful
+..             Documents      Pictures  Templates
+.bash_history  Downloads      .profile  .vboxclient-clipboard.pid
+.bash_logout   .gnupg         Public    .vboxclient-display-svga-x11.pid
+.bashrc        HelloWorld.sh  Scripts   .vboxclient-draganddrop.pid
+.cache         .local         snap      .vboxclient-seamless.pid
+.config        .mozilla       .ssh      Videos
+mahima@mahima-VirtualBox:~$ 
+
+
+28) list directories recursively
+
+Solution : ls -R command is used
+mahima@mahima-VirtualBox:~$ ls -R
+.:
+Desktop    Downloads      Music     Public   snap       Videos
+Documents  HelloWorld.sh  Pictures  Scripts  Templates
+
+./Desktop:
+
+./Documents:
+
+./Downloads:
+code_1.58.2-1626302803_amd64.deb
+
+./Music:
+
+./Pictures:
+
+./Public:
+
+./Scripts:
+Helloworld
+
+./snap:
+snap-store
+
+./snap/snap-store:
+547  common  current
+
+./snap/snap-store/547:
+
+./snap/snap-store/common:
+
+./Templates:
+
+./Videos:
+mahima@mahima-VirtualBox:~$ 
+
+
+
+30) Sort the files by size with largest at the top
+
+Solution : ls -laS command is used 
+mahima@mahima-VirtualBox:~$ ls -laS
+total 108
+drwxr-xr-x 18 mahima mahima 4096 Aug  6 13:17 .
+drwxr-xr-x  3 root   root   4096 Aug  4 11:13 ..
+drwx------ 13 mahima mahima 4096 Aug  4 21:20 .cache
+drwx------ 13 mahima mahima 4096 Aug  6 11:25 .config
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Desktop
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Documents
+drwxr-xr-x  2 mahima mahima 4096 Aug  5 12:43 Downloads
+drwx------  3 mahima mahima 4096 Aug  4 21:39 .gnupg
+drwx------  3 mahima mahima 4096 Aug  4 11:39 .local
+drwx------  5 mahima mahima 4096 Aug  4 21:20 .mozilla
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Music
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Pictures
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Public
+drwxrwxr-x  2 mahima mahima 4096 Aug  4 12:12 Scripts
+drwxr-xr-x  3 mahima mahima 4096 Aug  4 21:32 snap
+drwx------  2 mahima mahima 4096 Aug  4 11:42 .ssh
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Templates
+drwxr-xr-x  2 mahima mahima 4096 Aug  4 11:38 Videos
+-rw-r--r--  1 mahima mahima 3771 Aug  4 11:13 .bashrc
+-rw-r--r--  1 mahima mahima  807 Aug  4 11:13 .profile
+-rw-------  1 mahima mahima  528 Aug  6 11:54 .bash_history
+-rw-r--r--  1 mahima mahima  220 Aug  4 11:13 .bash_logout
+-rw-rw-r--  1 mahima mahima   26 Aug  6 11:54 HelloWorld.sh
+-rw-r-----  1 mahima mahima    5 Aug  6 13:15 .vboxclient-clipboard.pid
+-rw-r-----  1 mahima mahima    5 Aug  6 13:15 .vboxclient-display-svga-x11.pid
+-rw-r-----  1 mahima mahima    5 Aug  6 13:15 .vboxclient-draganddrop.pid
+-rw-r-----  1 mahima mahima    5 Aug  6 13:15 .vboxclient-seamless.pid
+-rw-r--r--  1 mahima mahima    0 Aug  4 11:47 .sudo_as_admin_successful
+mahima@mahima-VirtualBox:~$ 
+
+
+
+32) Sort the files by last time modified displaying the newest first.
+
+Solution : 
+
+34) Diplay the location of a program/command, where it is installed.
+
+Solution : home
+
+36) Which command is used to switch directory from one to another
+
+Solution : cd i.e change directory command is used to switch directory from one to another
+
+
+38) List all the environment variables set for the current shell environment
+
+Solution : env or printenv command is used 
+mahima@mahima-VirtualBox:~$ env
+SHELL=/bin/bash
+SESSION_MANAGER=local/mahima-VirtualBox:@/tmp/.ICE-unix/1212,unix/mahima-VirtualBox:/tmp/.ICE-unix/1212
+QT_ACCESSIBILITY=1
+COLORTERM=truecolor
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+XDG_MENU_PREFIX=gnome-
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+LANGUAGE=en_IN:en
+GNOME_SHELL_SESSION_MODE=ubuntu
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+XMODIFIERS=@im=ibus
+DESKTOP_SESSION=ubuntu
+SSH_AGENT_PID=1173
+GTK_MODULES=gail:atk-bridge
+PWD=/home/mahima
+LOGNAME=mahima
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=x11
+GPG_AGENT_INFO=/run/user/1000/gnupg/S.gpg-agent:0:1
+XAUTHORITY=/run/user/1000/gdm/Xauthority
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+WINDOWPATH=2
+HOME=/home/mahima
+USERNAME=mahima
+IM_CONFIG_PHASE=1
+LANG=en_IN
+GJS_DEBUG_OUTPUT=stderr
+LESSCLOSE=/usr/bin/lesspipe %s %s
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+LESSOPEN=| /usr/bin/lesspipe %s
+USER=mahima
+GNOME_TERMINAL_SERVICE=:1.100
+DISPLAY=:0
+SHLVL=1
+QT_IM_MODULE=ibus
+XDG_RUNTIME_DIR=/run/user/1000
+JOURNAL_STREAM=8:28867
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+_=/usr/bin/env
+
+40) Which command is used to print the text or any variables value in the Console/Terminal?
+
+Solution : cat <filename>
+
+44) Print the value of the env variable "PATH" on the console
+  
+Solution : echo $Env:PATH
+mahima@mahima-VirtualBox:~$ echo $Env:PATH
+:PATH
+mahima@mahima-VirtualBox:~$ 
+
+46) Is linux a case-sensitive operating system?
+
+Solution : yes, In linux all command should be in lower case. Linux treats capital letters and lower case letters as different characters. Linux is developed using c language and c language is case sensitive.
+
+48) Is, "Ls" same as "ls"?
+
+Solution : No, because Linux is case sensitive language all comand sin linux must be lowered case and if we try to execute Ls it will throw error nad if we try to execute ls it will list the files.
+mahima@mahima-VirtualBox:~$ Ls
+Ls: command not found
+mahima@mahima-VirtualBox:~$ 
+
+50) Display your currently logged in user
+
+Solution : w command is used to see currently logged in user
+mahima@mahima-VirtualBox:~$ w
+ 14:17:21 up  1:04,  1 user,  load average: 0.24, 0.13, 0.07
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+mahima   :0       :0               13:15   ?xdm?   2:06   0.07s /usr/lib/gdm3/g
+mahima@mahima-VirtualBox:~$ 
+
+52) how do you change the currrently logged in user to another user?
+
+Solution : su command 
+
+54) Which command is used to leave a shell environment that you are currently logged in to?
+
+Solution : exit or ctrl-d
+
+56) How do you reboot the system?
+
+Solution : reboot command is used to reboot the system 
+
+58) How do you shutdown the system?
+
+Solution : shutdown command is used
+
+60) Display all the major running processes in the system
+
+Solution : ps -aux | less
+Where,
+
+A : Select all processes
+u : Select all processes on a terminal, including those of other users
+x : Select processes without controlling ttys
+
+64) Display the name of the system kernel
+
+Solution : uname -s
+
+66) display the kernel release number
+
+Solution : uname -r
+
+68) display teh machine type of the current kernel 
+
+Solution :uname -m
+
+70) Display the name of the operating system that the kernel is running on
+
+Solution : uname -o
+
+Ubuntu
+
+72) Display all info that uname command can show.
+
+Solution : uname --help
+
+74) Display the name of directory that you are currently pointing to
+
+Solution : pwd
+
+76) change the current directory to another directory that you have in your system.
+
+Solution : cd <directory name> this command is used
+
+80) Return to last directory
+
+Solution : cd .. command is used to return to last directory
+
+86) In which file the history of commands are stored in?
+
+Solution : The history of commands are dtored in the ~/. bash_history file by default.
+
+
+88) How many lines of history does the system keep and from where you can change it?
+
+
+Solution : Most accounts are set up to record 100, 500 or 1,000 commands,
+and the older commands are overwritten by newer ones when that limit is exceeded
+
+90) How can you modify bash's history behaviour
+
+Solution : To change this default behavior and make it to instantly save each command you have executed, 
+you can make use of PROMPT_COMMAND.
+now whenever you execute any command , it will be immediately added to the history file 
+
+96) What are the different types of shell and where are they used and how do we use them?
+
+Solution : bash(bourne Again shell), sh(bourne ahell), ksh(Korn shell), sh(POSIX shell)
+
+98) What is the difference between login shell and non-login shell?
+
+Solution : 
+If the output is the name of our shell, prepended by a dash, 
+then it is a login shell.
+A Non login shell is started by a program without a login. 
+For example, for a Bash shell it will be simply bash.
+
+100) How do we start login shell and non-login shell?
+
+102) What happens when you start a login shell (which files are read and used and Why)?
+
+Solution : 
+profile file is read by all Login shell. , it first reads and executes commands from the 
+file /etc/profile
+
+104) What happens when you start a non-login shell (Which files are read and used and Why)?
+
+106) What are Shell Configuration Files, why do we need it?
+
+Solution : To configure Bash to use our custom settings we need to configure 
+various configuration files that are used. 
+
+108) Explain the Order of file usage from the system/user's home directory when user logs in to the System.
+
+110) What are Shell Variables, list major shell variables and what do they represent?
+
+Solution : A shell variable is a variable that is available only to the current shell.
+USER - The current logged in user.
+HOME - The home directory of the current user.
+EDITOR - The default file editor to be used. ...
+SHELL - The path of the current user's shell, such as bash or zsh.
+LOGNAME - The name of the current user. 
+
+112) How we see all our env variables?
+
+Solution : we can see all env variables by using printenv command
+
+114) How we see all env variables in alphabical order?
+
+Solution : 
+use this command from any location: get-childitem env:*
+
+122) Difference between Local/Shell variables to Global Variable
+
+Solution : 
+Local Variables : Local variables are declared inside the function. Local variables are created when the function has started 
+execution and is lost when the function terminates,
+Global Variables : Global variables are declared outside the function. Global variable is created as execution starts 
+and is lost when the program ends.
+
+130) What is Globbing? Explain in depth with examples?
+Solution : The Bash shell feature that is used for matching or expanding specific types
+of patterns is called globbing.
+Globbing is mainly used to match filenames or searching for content in a file.
+
+140) What is Quoting? and Why do we need it?
+Solution : It is useful to suppress warnings and error messages while writing the shell scripts.
+
+142) Write few(minimum 3) unique examples that shows, how a particular problem is solved using Quoting.
+
+147) Write major difference between locate, find and whereis?
+
+Solution : whereis is used to finds the binary, the source, and the man page files for 
+a program.
+locate indeed finds all the files that have the pattern specified anywhere in their paths.
+find = finds one or more files assuming that you know their approximate filenames
+
+151) Explain the Linux File System.
+
+Solution : 
+It is a structured/Logical collection of files on a disk drive or 
+a partition. partition is a segment of memory and it contains data. 
+
+152) Explain absolute and Relative Paths
+
+Solution : 
+Absolute Path : Absolute path is defined as the location 
+of a file directory from the root directory
+Relative Path : Relative path points to a specific location in a file system
+which is relative to the current directory in which we are working. 
+
+155) What are the different ways of creating a File in linux System? Write an example of each and the difference between them.
+
+Solution : The different ways of creating a File in linux System are
+1) cat > <filename>
+This command is used to create a new file. 
+
+2) touch <filename>
+we can create empty file by using touch command 
+
+3)vi <filename>
+This command creates a new file and open that file into vi editor.
+
+The difference of all commands are 
+In cat command file is created and we can write some text into that after creating file which can be seen by 
+cat <filename>. In touch command empty file is created. 
+
+157) In how many ways we can delete the files from linux system? write an example of each and teh difference between them.
+Solution :
+1) rm <filename>
+We can delete files in linux using rm command with space and filename
+
+159) Archiving files using linux command, write a command to archive set of files from linux commands.
+
+Solution : The common ways to archieve files in linux are 
+Tar
+Zip
+
+
